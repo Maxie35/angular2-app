@@ -1,0 +1,53 @@
+<div class="map">
+	<sebm-google-map 
+		      [latitude]="lat"
+		      [longitude]="lng"
+		      [zoom]="zoom"
+		      [disableDefaultUI]="false"
+		      [zoomControl]="false"
+		      (mapClick)="mapClicked($event)">
+
+
+		       	<sebm-google-map-marker 
+		          *ngFor="let m of markers; let i = index"
+		          (markerClick)="clickedMarker(m, i)"
+		          [latitude]="m.lat"
+		          [longitude]="m.lng"
+		          [iconUrl]="m.icon"
+		          [visible]="m.visible"
+		          [markerDraggable]="m.draggable"
+		          (dragEnd)="markerDragEnd(m, $event)">
+		          
+		        <sebm-google-map-info-window [isOpen]="m.isOpen">
+		          <strong>{{m.label || i}}</strong>
+		        </sebm-google-map-info-window>
+		        
+		      </sebm-google-map-marker>
+		      
+		      <sebm-google-map-circle [latitude]="lat + 0.05" [longitude]="lng + 0.2" 
+		          [radius]="5000"
+		          [fillColor]="'blue'"
+		          [circleDraggable]="true"
+		          [editable]="true"
+		          (dragEnd)="markerDragEnd(m, $event)">
+		      </sebm-google-map-circle>
+	</sebm-google-map>
+
+	<div class="legend">
+		<div ngbDropdown class="d-inline-block">
+			<button class="btn btn-primary" id="dropdownMenu1" ngbDropdownToggle>Filters</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<div class="radio">
+					<input type="checkbox" id="radio-1" (click)="toggleMarkers('red')" checked> <br />
+					<label  for="radio-1" class="radio-label">Show red</label>
+				</div>
+				<div class="radio">
+					<input type="checkbox" id="radio-2" (click)="toggleMarkers('black')" checked> <br />
+					<label  for="radio-2" class="radio-label">Show black</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+

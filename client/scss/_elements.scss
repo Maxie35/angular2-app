@@ -1,0 +1,38 @@
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font;
+    color: $text-regular;
+    background-color: $bg-normal;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+a img {
+    border: none;
+}
+
+
+.hide {
+    display: none
+}
+
+*:focus {
+    outline: none;
+}
+
+.clear {
+    clear: both;
+}

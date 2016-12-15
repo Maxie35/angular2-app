@@ -1,0 +1,29 @@
+[
+    {
+      "lat": 52.37690911061612,
+      "lng": 4.800209999084473,
+      "label": "Gekke osso",
+      "draggable": false,
+      "visible": true,
+      "icon": "client/images/pin.png",
+      "isOpen": false
+    },
+    {
+      "lat": 52.37690911061612,
+      "lng": 5.000209999084473,
+      "label": "B",
+      "draggable": false,
+      "visible": true,
+      "icon": "client/images/pin2.png",
+      "isOpen": false
+    },
+    {
+      "lat": 52.37690911061612,
+      "lng": 4.900209999084473,
+      "label": "C",
+      "draggable": true,
+      "visible": true,
+      "icon": "client/images/pin.png",
+      "isOpen": false
+    }
+  ]

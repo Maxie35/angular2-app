@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header">Post a message</div>
+		<div class="card-block">
+			<div class="input-group">
+				<textarea class="form-control" id="messagebox" value="" placeholder="Post a message" rows=3 style="resize:none" [(ngModel)]="message"></textarea>
+				<span class="input-group-addon btn btn-primary" (click)="postMessage()">Post</span>
+			</div>
+		</div>
+	</div>
+
+	<br />
+	<br />
+
+	<div class="card">
+		<div class="card-header">Messages</div>
+		<div class="card-block">
+			<ul class="list-group">
+				<li class="list-group-item" *ngFor="let message of messages | reverse">{{message.msg}}<span style="float: right;">{{message.time | date}}</span></li>
+			</ul>
+		</div>
+	</div>
+</div><!--End container-->

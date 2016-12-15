@@ -1,0 +1,75 @@
+.img-circle{border-radius:50%}
+
+.artist-header {
+  margin-bottom: 50px;
+  padding-bottom: 120px;
+  border-bottom: solid 1px #333;
+
+  .artist-info {
+    padding-top: 50px;
+  }
+}
+
+.artist-thumb {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.artist-albums {
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+}
+.artist-albums .card{
+
+  background-color: #333;
+  margin-bottom: 20px;
+  overflow: auto;
+  min-height: 400px;
+  color: white;
+
+  h5 {
+    margin-top: 20px;
+  }
+
+}
+.album {
+  text-align: center;
+  background: #333;
+  padding: 10px 20px;
+  border: #666 1px solid;
+}
+
+.album-thumb {
+  width: 100%;
+}
+
+.album-header {
+  padding: 20px;
+  border-bottom: solid 1px #333;
+
+    .btn {
+      margin-top: 15px;
+    }
+}
+
+.album-tracks .card{
+
+  background-color: #333;
+  margin-bottom: 20px;
+  overflow: auto;
+  color: white;
+
+  h5 {
+    margin: 15 15 15 15px;
+  }
+
+  audio {
+    margin: 15 15 15 15px;
+  }
+}
